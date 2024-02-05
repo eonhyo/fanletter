@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# 팬레터 페이지
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+이번 과제인 팬레터 페이지 만들기 입니다.
 
-## Available Scripts
+좋아하는 아이돌에게 각각의 팬레터를 저장할 수 있는 페이지를 만들었습니다.
 
-In the project directory, you can run:
 
-### `yarn start`
+![스크린샷 2024-02-05 113237](https://github.com/eonhyo/fanletter/assets/151523534/819bdc73-cd9b-42db-b30b-940df52b08e4)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+style components를 이용해 각 스타일들을 따로 파일을 만들어서 저장을 했고,
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![스크린샷 2024-02-05 113338](https://github.com/eonhyo/fanletter/assets/151523534/e99c70fc-f38c-4e29-806c-f5e82512107a)
 
-### `yarn test`
+GlobalStyle을 적용해 공통으로 사용되는 부분을 지정했습니다.
+주로 사용을 한 것은 useState를 가장 많이 사용하였습니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![스크린샷 2024-02-05 112858](https://github.com/eonhyo/fanletter/assets/151523534/6e834504-b40c-4ae5-a548-4609e0d5c8f6)
 
-### `yarn build`
+이런식으로 누구에게 보내실 건가요? 부분에서 원하는 멤버를 선택한 뒤 등록하기를 누르면 내용이 저장이 되고 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![스크린샷 2024-02-05 112906](https://github.com/eonhyo/fanletter/assets/151523534/488e8c1b-a46a-47cc-a03c-22516fce185a)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+다른 멤버의 이름을 누르면 해당 멤버의 팬레터만 보이게끔 해놨습니다
