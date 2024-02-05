@@ -10,7 +10,7 @@ import {
 const Fanletters = ({ item }) => {
   return (
 
-    <Link to={`/detail/${item.id}`} state={{ item }}>
+    <Link to={`/detail/${item.id}`} state={{ item }} style={{ textDecoration: "none"}}>
       <FanLetterList>
         <Fanletter>
           <Profile src={item.avatar} alt="" />

@@ -132,6 +132,8 @@ export const MoveHomeButton = styled.button`
   cursor: pointer;
 `;
 
+
+
 export const LetterDetailBox = styled.div`
   width: 800px;
   min-height: 500px;
@@ -193,14 +195,3 @@ export const BoxButton = styled.button`
   cursor: pointer; 
 `;
 
-export const NoFanletter = styled.p`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  width: 600px;
-  height: 50px;
-  border-radius: 5px;
-  color: white;
-  font-size: 17px;
-`;

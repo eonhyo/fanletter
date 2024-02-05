@@ -1,11 +1,13 @@
 import GlobalStyle from "components/GlobalStyle";
-import React, { useState } from "react";
-import { Main, NoFanletter } from "../Styled";
+import React, { useContext, useState } from "react";
+import { Main } from "../Styled";
 import Fanletters from "./Fanletters";
 import IveMembers from "./IveMembers";
 import FanletterWrite from "./FanletterWrite";
+import { FanLettersContext } from "context/FanLettersContext";
 
-function FanletterMain({ fanLetters, setFanLetters }) {
+function FanletterMain() {
+  const contextData = useContext(FanLettersContext);
   const addButton = ({ userName, detail, iveMember }) => {
     const newLetter = {
       date: Date(),
@@ -26,10 +28,9 @@ function FanletterMain({ fanLetters, setFanLetters }) {
         "닉네임, 내용이 형식에 맞지 않습니다.(닉네임 최대 10자 / 내용 최대 100자)"
       );
     } else {
-      setFanLetters([...fanLetters, newLetter]);
+      contextData.setFanLetters([...contextData.fanLetters, newLetter]);
     }
   };
-
 
   const [selectedMember, setSelectedMember] = useState("");
 
@@ -39,7 +40,7 @@ function FanletterMain({ fanLetters, setFanLetters }) {
   };
 
   const memberFilter = () => {
-    const filteringMember = fanLetters.filter(
+    const filteringMember = contextData.fanLetters.filter(
       (item) => selectedMember === "" || item.iveName === selectedMember
     );
     if (filteringMember.length > 0) {
@@ -48,8 +49,7 @@ function FanletterMain({ fanLetters, setFanLetters }) {
       ));
     } else {
       return (
-        <NoFanletter>
-        </NoFanletter>
+        <></>
       );
     }
   };
@@ -65,10 +65,10 @@ function FanletterMain({ fanLetters, setFanLetters }) {
         />
 
         <FanletterWrite addButton={addButton} />
-        <div>
-
+        <>
+  
           {memberFilter()}
-        </div>
+        </>
       </Main>
     </>
   );
