@@ -1,6 +1,6 @@
 import GlobalStyle from "components/GlobalStyle";
 import React, { useState } from "react";
-import { Main, NoFanletter } from "../Styled";
+import { Main} from "../Styled";
 import Fanletters from "./Fanletters";
 import IveMembers from "./IveMembers";
 import FanletterWrite from "./FanletterWrite";
@@ -48,8 +48,7 @@ function FanletterMain({ fanLetters, setFanLetters }) {
       ));
     } else {
       return (
-        <NoFanletter>
-        </NoFanletter>
+      <></>
       );
     }
   };
@@ -65,10 +64,10 @@ function FanletterMain({ fanLetters, setFanLetters }) {
         />
 
         <FanletterWrite addButton={addButton} />
-        <div>
+        <>
 
           {memberFilter()}
-        </div>
+        </>
       </Main>
     </>
   );
