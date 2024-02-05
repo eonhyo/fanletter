@@ -62,6 +62,8 @@ const FanletterWrite = ({ addButton }) => {
       <RegisterButton
         onClick={() => {
           addButton({ userName, detail, iveMember });
+          setUserName("");
+          setDetail("");
         }}
       >
         등록하기
